@@ -1,6 +1,38 @@
-# Getting Started with Create React App
+# Desafio Front End
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Especificações técnicas
+Utilizar as diretrizes do Google Material Design.
+
+Utilizar uma API de busca do YouTube.
+
+Mobile first e responsivo.
+
+Usar framework JS (Desejável).
+
+Cores livres, layout livre, imagens livres.
+
+
+# Tela Inicial
+Essa tela terá um posicionamento de busca no meio da tela com o campo de texto "Pesquisar" e o botão "Buscar". Esse formulário deve ter validação.
+
+Essa busca deve chamar um URL https://www.googleapis.com/youtube/v3/search?part=id,snippet&q={termo_de_busca}&key={API_KEY}
+
+Ao usar o formulário, o formulário deve ser feito para ser buscado para o topo da tela e mostrar a lista de resultados com campos título, descrição, thumbnail e um link para a página de detalhes.
+
+Essa página deve ter paginação, usando os recursos de paginação da api .
+
+# Tela de detalhes
+A partir do videoId retornado na outra chamada, deve ser feito uma chamada para https://www.googleapis.com/youtube/v3/videos?id={VIDEO_ID}&part=snippet,statistics&key={API_KEY}
+
+A partir desse retorno, deve-se montar uma tela contendo embed do video, título, like, deslike, descrição e visualizações.
+
+Essa tela deve ter um botão para voltar, exibindo os últimos resultados da busca com a pagina em questão ativa.
+
+## Stack utilizada
+
+**Front-end:** React / Html
+
+
 
 ## Available Scripts
 
@@ -38,33 +70,3 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
